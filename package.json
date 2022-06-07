@@ -1,0 +1,44 @@
+{
+  "name": "electron-rebuilder",
+  "version": "0.0.11",
+  "description": "Prepare a Node.js package before being published",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test/ --recursive --timeout=10000",
+    "start": "node ./src/index.js",
+    "prepare": "node -e 'require(`prepare-package`)'"
+  },
+  "preparePackage": {
+    "input": "src",
+    "output": "dist",
+    "replace": {}
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itw-creative-works/electron-rebuilder.git"
+  },
+  "keywords": [
+    "management",
+    "backend",
+    "frontend",
+    "productivity"
+  ],
+  "author": "ITW Creative Works",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itw-creative-works/electron-rebuilder/issues"
+  },
+  "homepage": "https://itwcreativeworks.com",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs-jetpack": "^4.3.1",
+    "wonderful-fetch": "^0.0.5"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1",
+    "prepare-package": "^0.0.6"
+  }
+}
