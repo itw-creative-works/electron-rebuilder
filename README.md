@@ -41,7 +41,7 @@ After installing via npm, simply put this in your `package.json`
 ...
 "main": "dist/index.js",
 "scripts": {
-  "rebuild": "node -e 'require(`electron-rebuilder`)'"
+  "rebuild": "node -e 'require(`electron-rebuilder`)()'"
 },
 ...
 ```

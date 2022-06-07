@@ -33,15 +33,6 @@ module.exports = async function (electronVersion, abiVersion) {
 
   console.log(chalk.blue(`[electron-rebuilder]: Using Node.js v${nodeVersion}`));
 
-  // const ls = spawn(command, {shell: true});
-  // ls.stdout.on('data', (data) => {
-  //   console.log(chalk.blue(`[electron-rebuilder]:`, data.toString()));
-  // });
-  // ls.stderr.on('data', (data) => {
-  //   console.log(chalk.red(`[electron-rebuilder]: Failed to rebuild`, data.toString()));
-  //   return process.exit(1);
-  // });
-
   child('npm', ['rebuild', '--runtime=electron', `--target=${electronVersion}`, `--abi=${abiVersion}`, `--disturl=https://atom.io/download/atom-shell`], process.cwd())
     .then((result) => {
       console.log(chalk.green(`[electron-rebuilder]:`, 'Success'));
