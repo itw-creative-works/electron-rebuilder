@@ -2,6 +2,7 @@ module.exports = async function (electronVersion, abiVersion) {
   const fetch = require('wonderful-fetch');
   const { spawn, exec, fork } = require('child_process');
   const chalk = require('chalk');
+  const path = require('path');
   const package = require(path.join(process.cwd(), 'package.json'));
   electronVersion = electronVersion || package.devDependencies.electron.match(/[\.0-9]*$/)[0];
 
