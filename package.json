@@ -1,6 +1,6 @@
 {
   "name": "electron-rebuilder",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Prepare a Node.js package before being published",
   "main": "dist/index.js",
   "scripts": {
