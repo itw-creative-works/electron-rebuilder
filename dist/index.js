@@ -31,7 +31,7 @@ module.exports = async function (electronVersion, abiVersion) {
   const nodeVersion = electronMap.find(i => i.version === electronVersion).deps.node;
   abiVersion = abiVersion || abiMap[nodeVersion];
 
-  console.log(chalk.blue(`[electron-rebuilder]: Using Node.js v${nodeVersion}`));
+  console.log(chalk.blue(`[electron-rebuilder]: Using versions... node=${nodeVersion}, electron=${electronVersion}, abi=${abiVersion}`));
 
   child('npm', ['rebuild', '--runtime=electron', `--target=${electronVersion}`, `--abi=${abiVersion}`, `--disturl=https://atom.io/download/atom-shell`], process.cwd())
     .then((result) => {
