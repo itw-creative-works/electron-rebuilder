@@ -11,14 +11,14 @@ module.exports = async function (electronVersion, abiVersion) {
   let abiMap;
 
   await fetch(`https://cdn.jsdelivr.net/npm/electron-releases@latest/lite.json`, {
-    responseFormat: 'json',
+    response: 'json',
     tries: 3,
   })
   .then(result => electronMap = result)
   .catch(e => error = e)
 
   await fetch(`https://cdn.jsdelivr.net/npm/node-abi-version@latest/nodeabi.json`, {
-    responseFormat: 'json',
+    response: 'json',
     tries: 3,
   })
   .then(result => abiMap = result)
