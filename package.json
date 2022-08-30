@@ -39,6 +39,6 @@
   },
   "devDependencies": {
     "mocha": "^8.0.1",
-    "prepare-package": "^0.0.12"
+    "prepare-package": "^0.0.13"
   }
 }
