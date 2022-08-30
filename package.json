@@ -4,7 +4,7 @@
   "description": "Prepare a Node.js package before being published",
   "main": "dist/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test/ --recursive --timeout=10000",
+    "test": "npm run prepare && ./node_modules/mocha/bin/mocha test/ --recursive --timeout=10000",
     "start": "node ./src/index.js",
     "prepare": "node -e 'require(`prepare-package`)'"
   },
@@ -38,7 +38,7 @@
     "wonderful-fetch": "^0.0.14"
   },
   "devDependencies": {
-    "mocha": "^8.0.1",
+    "mocha": "^8.4.0",
     "prepare-package": "^0.0.13"
   }
 }
