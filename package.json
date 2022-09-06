@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run prepare && ./node_modules/mocha/bin/mocha test/ --recursive --timeout=10000",
     "start": "node ./src/index.js",
-    "prepare": "node -e 'require(`prepare-package`)'"
+    "prepare": "node -e 'require(`prepare-package`)()'"
   },
   "preparePackage": {
     "input": "src",
