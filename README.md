@@ -7,8 +7,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/package-json/v/itw-creative-works/electron-rebuilder.svg">
   <br>
-  <img src="https://img.shields.io/david/itw-creative-works/electron-rebuilder.svg">
-  <img src="https://img.shields.io/david/dev/itw-creative-works/electron-rebuilder.svg">
+  <img src="https://img.shields.io/librariesio/release/npm/electron-rebuilder.svg">
   <img src="https://img.shields.io/bundlephobia/min/electron-rebuilder.svg">
   <img src="https://img.shields.io/codeclimate/maintainability-percentage/itw-creative-works/electron-rebuilder.svg">
   <img src="https://img.shields.io/npm/dm/electron-rebuilder.svg">

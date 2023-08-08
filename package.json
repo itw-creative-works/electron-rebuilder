@@ -1,6 +1,6 @@
 {
   "name": "electron-rebuilder",
-  "version": "0.0.20",
+  "version": "1.0.0",
   "description": "Prepare a Node.js package before being published",
   "main": "dist/index.js",
   "scripts": {
@@ -35,10 +35,10 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "fs-jetpack": "^4.3.1",
-    "wonderful-fetch": "^0.0.14"
+    "wonderful-fetch": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "^8.4.0",
-    "prepare-package": "^0.0.16"
+    "prepare-package": "^1.0.0"
   }
 }
