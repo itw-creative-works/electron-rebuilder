@@ -1,20 +1,16 @@
 {
   "name": "electron-rebuilder",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Prepare a Node.js package before being published",
   "main": "dist/index.js",
   "scripts": {
     "test": "npm run prepare && ./node_modules/mocha/bin/mocha test/ --recursive --timeout=10000",
     "start": "node ./src/index.js",
-    "prepare": "node -e 'require(`prepare-package`)()'"
-  },
-  "preparePackage": {
-    "input": "src",
-    "output": "dist",
-    "replace": {}
+    "prepare": "node -e \"require('prepare-package')()\"",
+    "prepare:watch": "nodemon -w ./src -e '*' --exec 'npm run prepare'"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=12"
   },
   "repository": {
     "type": "git",
@@ -32,13 +28,19 @@
     "url": "https://github.com/itw-creative-works/electron-rebuilder/issues"
   },
   "homepage": "https://itwcreativeworks.com",
+  "preparePackage": {
+    "input": "src",
+    "output": "dist",
+    "replace": {}
+  },
   "dependencies": {
     "chalk": "^4.1.2",
     "fs-jetpack": "^4.3.1",
-    "wonderful-fetch": "^1.0.0"
+    "itwcw-package-analytics": "^1.0.4",
+    "wonderful-fetch": "^1.1.12"
   },
   "devDependencies": {
     "mocha": "^8.4.0",
-    "prepare-package": "^1.0.0"
+    "prepare-package": "^1.1.12"
   }
 }
